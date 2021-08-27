@@ -1,13 +1,10 @@
-DROP TABLE IF EXISTS billionaires;
+DROP TABLE IF EXISTS currency_mapping;
 
-CREATE TABLE billionaires (
+CREATE TABLE currency_mapping (
   id INT AUTO_INCREMENT  PRIMARY KEY,
-  first_name VARCHAR(250) NOT NULL,
-  last_name VARCHAR(250) NOT NULL,
-  career VARCHAR(250) DEFAULT NULL
+  code VARCHAR(10) NOT NULL,
+  chinese VARCHAR(50) NOT NULL
 );
 
-INSERT INTO billionaires (first_name, last_name, career) VALUES
-  ('Aliko', 'Dangote', 'Billionaire Industrialist'),
-  ('Bill', 'Gates', 'Billionaire Tech Entrepreneur'),
-  ('Folrunsho', 'Alakija', 'Billionaire Oil Magnate');
+INSERT INTO currency_mapping (first_name, last_name, career) VALUES
+  ('USD', '美元'), ('HKD', '港幣'), ('GBP', '英磅'), ('EUR', '歐元') ;
