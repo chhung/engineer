@@ -14,7 +14,8 @@ public class ConvertCondesk {
         return currencyInfo;
     }
     
-    public String toJsonFromModel() {
-        
+    public String toJsonFromModel(CurrencyInfoModel model) {
+    	Gson gson = new Gson();
+    	return gson.toJson(model);
     }
 }
